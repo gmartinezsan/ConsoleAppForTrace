@@ -1,0 +1,35 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {},
+  "frameworks": {
+    "net451": {
+      "buildOptions": {
+        "compile": {
+          "exclude": [
+            "Framework/core10/*.*"
+          ]
+        }
+      }
+    },
+    "netcoreapp1.0": {
+      "imports": "dnxcore50",
+      "buildOptions": {
+        "define": [ "NETCORE10" ],
+        "compile": {
+          "exclude": [
+            "Framework/net451/*.*"
+          ]
+        }
+      },
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}
